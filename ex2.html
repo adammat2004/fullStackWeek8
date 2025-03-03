@@ -1,0 +1,15 @@
+<html>
+    <head>
+        <title>Exercise 2</title>
+    </head>
+    <body>
+        <h1>Ex 2</h1>
+        <p id="paragraph">this text should change colour when the <button id="button">button</button> is clicked</p>
+    </body>
+</html>
+
+<script>
+    document.getElementById("button").addEventListener("click", function() {
+        document.getElementById("paragraph").style.color = "red";
+    });
+</script>

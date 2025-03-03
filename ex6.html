@@ -1,0 +1,20 @@
+<html>
+    <head>
+        <title>Exercise 6</title>
+    </head>
+    <body>
+        <h1>Ex 6</h1>
+        <img id="img" src=""/>
+        <button id="submit">Submit</button>	
+    </body>
+</html>
+
+<script>
+    document.getElementById("submit").addEventListener("click", function(){
+        fetch("https://dog.ceo/api/breeds/image/random")
+        .then(response => response.json())
+        .then(data => {
+            document.getElementById("img").src = data.message;
+        })
+    })
+</script>

@@ -1,0 +1,30 @@
+<html>
+    <head>
+        <title>Exercise 5</title>
+    </head>
+    <body>
+        <h1>Ex 5</h1>
+        <p id="name"></p>
+        <p id="diameter"></p>
+        <p id="climate"></p>
+        <p id="terrain"></p>
+        <p id="population"></p>
+    </body>
+</html>
+
+<script>
+    const name = document.getElementById("name");
+    const diameter = document.getElementById("diameter");
+    const climate = document.getElementById("climate");
+    const terrain = document.getElementById("terrain");
+    const population = document.getElementById("population");
+    fetch("https://swapi.dev/api/planets/1")
+    .then(response => response.json())
+    .then(data => {    
+        name.innerHTML = `Name: ${data.name}`;
+        diameter.innerHTML = `Diameter: ${data.diameter}`;
+        climate.innerHTML = `Climate: ${data.climate}`;
+        terrain.innerHTML = `Terrain: ${data.terrain}`;
+        population.innerHTML = `Population: ${data.population}`;
+    })
+</script>
